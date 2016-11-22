@@ -135,5 +135,5 @@ Pépin is licensed with the [GNU Lesser General Public License LGPL](https://ope
 
 Pépin was developed by [Antoine Dornstetter](http://dornstetter.com/antoine/), as part of its end-of-studies internship at [TAT Studio](http://tatprod.com/en/) from April to September 2016. Thanks to Stéphane Margail, Laurent Chea and Romain Teyssonnière.
 
-<a href="http://tatprod.com/en/" style="text-align: center; width: 100%;">
-![Pepin Logo](github/tat-productions.png)</a>
+<div style="text-align:center"><a href="http://tatprod.com/en/">
+![Pepin Logo](github/tat-productions.png)</a></div>
