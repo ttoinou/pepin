@@ -1,4 +1,4 @@
-# Pép✝n 
+# Pép✝n Media Player
 ## Key features
 
 Pépin (*Pépin est un Espace de Prévisualisation IntraNet*) is a full-featured web-based image and video player. It was designed for AV professionals at [TAT Studio](http://tatprod.com/en/), an animation studio based in Toulouse, France.
@@ -11,6 +11,10 @@ Key features are :
  * **Annotations** : graphical and/or textual notes, including basic shapes and freehand drawing with Bézier curves (C), annotations can be put on a video at a given frame ;
  * **Keyboard shortcuts** for every action.
 
+## Live demo
+
+Live demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstetter.com/antoine/pepin/</a>. Medias take a little while to download fully.
+ 
 ## User interface
 Pépin UI includes :
  
@@ -20,7 +24,7 @@ Pépin UI includes :
  * A help tip in English or French to explain every feature and its shortcut (button ? in the toolbar) ;
  * A central area with the media, its name, a top slider for 1D Lock and a bottom timeline for videos.
 
-# Screenshots
+## Screenshots
 
 (A) Media comparison example with different photo processing (top right is raw photo) :
 
@@ -34,7 +38,7 @@ Pépin UI includes :
 
 ![C](github/ScreenshotC.jpg)
 
-# H.264 frame accurate seeking
+# H.264 Frame Accurate Seeking Issue
 
 My research were focused on trying to get every frame out of H.264 mp4 file with Firefox and Chrome. I have found that you have to encode the video without [Bipredictive frames](https://en.wikipedia.org/wiki/Inter_frame#B-frame). Theses are the frames that disappears when the video is paused and the video scrubbed (modifying the  `currentTime`  variable).
 
@@ -43,7 +47,7 @@ My research were focused on trying to get every frame out of H.264 mp4 file with
 
 You can encode with ffmpeg and  `libx264 `  with the  ` -bf 0` argument in order to remove B-Frames.
 
-# Installing and coding
+# Installing and Coding
 
 Pépin on the client side uses [VueJS v1.0](https://vuejs.org/), jQuery and [screenfull](https://github.com/sindresorhus/screenfull.js/).
 
@@ -51,15 +55,15 @@ Pépin back-end is based on the [webpack vue-js boilerplate](https://vuejs-templ
 
 Install dependencies with `npm install` before running one of theses two commands :
 
-## npm run dev
+## `npm run dev`
 
 Serves `index.html5` on `localhost:8000` 
 
-## npm run build
+## `npm run build`
 
 Builds the dist folder with javascript compiled, css, images (some are minified into the CSS), and static javascript libraries.
 
-## `filmStrip.py` script
+## `filmStrip.py` Script
 
 This script is useful for creating video thumbnails in Pépin :
 
@@ -72,7 +76,7 @@ To understand what every file is about :
 <img src="github/PepinGeneral_v3b.png" align="center" width="700" title="Pepin diagram">
 
 
-# Using in webpage
+# Using in a web page
 An example of using Pépin is given in `index.html5`, with sidebar's content customized.
 
 ## Setup
@@ -114,6 +118,10 @@ Pepin's methods are :
  * `sidebarClose` / `sidebarOpen` ;
  * 
 
+## Known bugs
+
+ * AB Comparison not working with Firefox when hosted online (works in localhost) ;
+
 # Future
 
 Interesting features to be added are :
@@ -125,15 +133,11 @@ Interesting features to be added are :
  * Handling gigapixel photos ;
  * Image and video color filters.
  
-# Known bugs
-
- * AB Comparison not working with Firefox when hosted online (works in localhost) ;
-
 # Credits and license
 
 Pépin is licensed with the [GNU Lesser General Public License LGPL](https://opensource.org/licenses/LGPL-3.0).
 
 Pépin was developed by [Antoine Dornstetter](http://dornstetter.com/antoine/), as part of its end-of-studies internship at [TAT Studio](http://tatprod.com/en/) from April to September 2016. Thanks to Stéphane Margail, Laurent Chea and Romain Teyssonnière.
 
-<div style="text-align:center"><a href="http://tatprod.com/en/">
-![Pepin Logo](github/tat-productions.png)</a></div>
+<a href="http://tatprod.com/en/">
+![Pepin Logo](github/tat-productions.png)</a>
