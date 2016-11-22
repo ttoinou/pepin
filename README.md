@@ -125,11 +125,15 @@ Interesting features to be added are :
  * Handling gigapixel photos ;
  * Image and video color filters.
  
+# Known bugs
+
+ * AB Comparison not working with Firefox when hosted online (works in localhost) ;
+
 # Credits and license
 
 Pépin is licensed with the [GNU Lesser General Public License LGPL](https://opensource.org/licenses/LGPL-3.0).
 
 Pépin was developed by [Antoine Dornstetter](http://dornstetter.com/antoine/), as part of its end-of-studies internship at [TAT Studio](http://tatprod.com/en/) from April to September 2016. Thanks to Stéphane Margail, Laurent Chea and Romain Teyssonnière.
 
-<a href="http://tatprod.com/en/" align="center">
+<a href="http://tatprod.com/en/" style="text-align: center; width: 100%;">
 ![Pepin Logo](github/tat-productions.png)</a>
