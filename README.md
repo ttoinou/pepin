@@ -120,8 +120,12 @@ Pepin's methods are :
 
 ## Known bugs
 
- * AB Comparison not working with Firefox when hosted online (works in localhost) ;
+ * AB Comparison not working with Firefox on medias hosted online (works with media on localhost or file://)
 
+## Todo
+
+ * Upgrade to VueJS 2.1
+ 
 # Future
 
 Interesting features to be added are :
