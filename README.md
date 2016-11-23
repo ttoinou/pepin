@@ -11,9 +11,9 @@ Key features are :
  * **Annotations** : graphical and/or textual notes, including basic shapes and freehand drawing with Bézier curves (C), annotations can be put on a video at a given frame ;
  * **Keyboard shortcuts** for every action.
 
-## Live demo
+## Online demo
 
-Live demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstetter.com/antoine/pepin/</a>. Medias take a little while to download fully.
+Online demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstetter.com/antoine/pepin/</a>. Wait for medias downloading.
  
 ## User interface
 Pépin UI includes :
@@ -66,6 +66,8 @@ Builds the dist folder with javascript compiled, css, images (some are minified 
 ## `filmStrip.py` Script
 
 This script is useful for creating video thumbnails in Pépin :
+
+<img src="github/filmStrip.png" align="center" width="833" title="filmStrip example">
 
 You need to install Python, Pillow (`pip install Pillow`) and ffmpeg / ffprobe in order to use this script.
 
