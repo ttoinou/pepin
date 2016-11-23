@@ -1,11 +1,11 @@
-# Pép✝n Media Player
+# Pépin Media Player
 ## Key features
 
 Pépin (*Pépin est un Espace de Prévisualisation IntraNet*) is a full-featured web-based image and video player. It was designed for AV professionals at [TAT Studio](http://tatprod.com/en/), an animation studio based in Toulouse, France.
 
 Key features are :
 
- * **Displaying** : easy zoom and pan, media automatically fitting the available space, fullscreen, good display of very wide and very tall images (1D Lock mode) ;
+ * **Displaying** : easy zoom and pan, media automatically fitting the available space, fullscreen, good display of very wide and very tall images ;
  * Multiple **medias comparison** by overlapping (A) ;
  * **Video features** : frame accurate seeking, gapless video playlist imitating the output of a video editing software (B), looping, controls for playback rate  ;
  * **Annotations** : graphical and/or textual notes, including basic shapes and freehand drawing with Bézier curves (C), annotations can be put on a video at a given frame ;
