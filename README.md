@@ -6,37 +6,45 @@ Pépin (*Pépin est un Espace de Prévisualisation IntraNet*) is a full-featured
 Key features are :
 
  * **Displaying** : easy zoom and pan, media automatically fitting the available space, fullscreen, good display of very wide and very tall images ;
- * Multiple **medias comparison** by overlapping (A) ;
- * **Video features** : frame accurate seeking, gapless video playlist imitating the output of a video editing software (B), looping, controls for playback rate  ;
- * **Annotations** : graphical and/or textual notes, including basic shapes and freehand drawing with Bézier curves (C), annotations can be put on a video at a given frame ;
+ * Multiple **medias comparison** by overlapping (Screenshot B) ;
+ * **Video features** : frame accurate seeking & scrubbing (see issue after), gapless video playlist imitating the output of a video editing software (Screenshot C), looping, controls for playback rate ;
+ * **Annotations** : graphical and/or textual notes, including basic shapes and freehand drawing with Bézier curves (Screenshot D), annotations can be put on a video at a given frame ;
  * **Keyboard shortcuts** for every action.
+
+Pépin was mainly designed for its video features, allowing comparisons between different output, playback of a sequence of videos in the browser (without using a video editing software) and frame-by-frame inspection.
 
 ## Online demo
 
-Online demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstetter.com/antoine/pepin/</a>. Wait for medias downloading.
+Online demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstetter.com/antoine/pepin/</a>. Wait for medias to download.
  
 ## User interface
 Pépin UI includes :
  
  * A top toolbar to access all the features ;
- * The list of medias at the bottom, with filtering by type, group selection, media folders, buttons for comparison and video playlist ;
+ * The list of medias at the bottom, with left buttons for filtering by type, group selection, media folders, medias comparison and video playlist (first click these buttons and then select medias for comparison or playlist) ;
  * A customizable sidebar at the left ;
  * A help tip in English or French to explain every feature and its shortcut (button ? in the toolbar) ;
  * A central area with the media, its name, a top slider for 1D Lock and a bottom timeline for videos.
 
 ## Screenshots
 
-(A) Media comparison example with different photo processing (top right is raw photo) :
+(A) Overall appearance  :
 
 ![A](github/ScreenshotA.jpg)
 
-(B) Gapless video playlist example with 4 sequences of Big Buck Bunny :
+(B) Media comparison example with different photo processing (top right is the raw photo) :
 
 ![B](github/ScreenshotB.jpg)
 
-(C) Example of annotations with text, a circle, freehand drawings, a point and different colors :
+This feature works also with video !
+
+(C) Gapless video playlist example with 4 sequences of Big Buck Bunny :
 
 ![C](github/ScreenshotC.jpg)
+
+(D) Example of annotations with text, a circle, freehand drawings, a point and different colors :
+
+![D](github/ScreenshotD.jpg)
 
 # H.264 Frame Accurate Seeking Issue
 
@@ -110,15 +118,11 @@ var Pepin = Pepin.default.Vue(Pepin.default.CreatePepinObject({
     '$' : jQuery,
     screenfull : screenfull,
     props: [],
+    medias: [....]
 });
 ```
 
-## API
-
-Pepin's methods are :
-
- * `sidebarClose` / `sidebarOpen` ;
- * 
+See code and `index.html5` for more information about medias object and others methods.
 
 ## Known bugs
 
@@ -126,7 +130,9 @@ Pepin's methods are :
 
 ## Todo
 
- * Upgrade to VueJS 2.1
+ * Upgrade to VueJS 2.1 ;
+ * Finish API ;
+ * remove `v-if` and `v-for` on the same elements (vuejs warnings)
  
 # Future
 
@@ -142,6 +148,8 @@ Interesting features to be added are :
 # Credits and license
 
 Pépin is licensed with the [GNU Lesser General Public License LGPL](https://opensource.org/licenses/LGPL-3.0).
+
+Do not use in production.
 
 Pépin was developed by [Antoine Dornstetter](http://dornstetter.com/antoine/), as part of its end-of-studies internship at [TAT Studio](http://tatprod.com/en/) from April to September 2016. Thanks to Stéphane Margail, Laurent Chea and Romain Teyssonnière.
 

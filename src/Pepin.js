@@ -24,6 +24,7 @@ export default {
     var $ = opt.$;
     var screenfull = opt.screenfull;
     var props = Util.IsUndef(opt.props) ? [] : opt.props;
+    var medias = opt.medias;
 
     var Return = {
 
@@ -349,16 +350,16 @@ export default {
           this.$emit('zoomAutoEnable');
           this.$emit('changeNoteType',this.noteType);
 
-          //this.collection.UpdatePepin();
           // hack
           // todo remove ?
-          
           window.setTimeout(function(){
             this.collection.UpdatePepin();
             //this.LireMedias([[0]]);
           }.bind(this),50);
 
           window.requestAnimationFrame(this.raf);
+
+          this.collection.AjouterMedias(medias);
           //console.log('Pepin is ready !');
       },
 
@@ -368,7 +369,6 @@ export default {
 
         /* Pepin API */
 
-        /* Methods that can be overriden by the user of the library */
         sidebarOpen: function(){
           this.overlay.sidebarOpen();
         },
@@ -377,16 +377,14 @@ export default {
           this.overlay.sidebarClose();
         },
 
-        // to be overriden
+        /* Methods that can be overriden by the user of the library */
         onMediaChanged: function(NewMedia){
           console.log('The new current media selected in Pépin is : ',NewMedia);
         },
 
-        // to be overriden
         onClose: function(){
         },
 
-        // to be overriden
         onOpen: function(){
         },
 

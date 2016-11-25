@@ -1,6 +1,6 @@
 {
   "name": "pepin",
-  "version": "3.19.7",
+  "version": "3.19.8",
   "description": " Pépin is a web media player with features like zooming, comparisons, video editing & scrubbing, visual & textual annotations and freehand drawing",
   "repository" : {
       "type" : "git"

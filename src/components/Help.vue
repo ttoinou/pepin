@@ -236,7 +236,7 @@ export default {
     <p>$ov_center2£</p>
 
     <center>
-      Pepin v3.19.7
+      Pepin v3.19.8
     </center>
     <br />
 
