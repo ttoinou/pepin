@@ -11,7 +11,7 @@ Key features are :
  * **Annotations** : graphical and/or textual notes, including basic shapes and freehand drawing with Bézier curves (Screenshot D), annotations can be put on a video at a given frame ;
  * **Keyboard shortcuts** for every action.
 
-Pépin was mainly designed for its video features, allowing comparisons between different output, playback of a sequence of videos in the browser (without using a video editing software) and frame-by-frame inspection.
+Pépin was mainly designed for its video features, allowing comparisons between different output, playback of a sequence of videos directly in the browser (without using a video editing software) and frame-by-frame inspection.
 
 ## Online demo
 
@@ -21,17 +21,21 @@ Online demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstette
 
 (A) Overall appearance  :
 
-![A](github/ScreenshotA.jpg)
+![Screenshot A](github/ScreenshotA.jpg)
 
-(B) Media comparison example with different photo processing (top right is the raw photo) :
+(B) Media comparison example :
 
-![B](github/ScreenshotB.jpg)
+![Screenshot B1](github/ScreenshotB1.jpg)
+
+with different photo processing (top right is the raw photo) :
+
+![Screenshot B2](github/ScreenshotB.jpg)
 
 This feature works also with video !
 
 (C) Gapless video playlist example with 4 sequences of Big Buck Bunny :
 
-![C](github/ScreenshotC.jpg)
+![Screenshot C](github/ScreenshotC.jpg)
 
 (D) Example of annotations with text, a circle, freehand drawings, a point and different colors :
 
@@ -46,17 +50,18 @@ Pépin UI includes :
  * A help tip in English or French to explain every feature and its shortcut (button ? in the toolbar) ;
  * A central area with the media, its name, a top slider for 1D Lock and a bottom timeline for videos.
 
-# H.264 Frame Accurate Seeking Issue
-
+## H.264 Frame Accurate Seeking Issue
 My research were focused on trying to get every frame out of H.264 mp4 file. I have found that you have to encode the video without [Bipredictive frames](https://en.wikipedia.org/wiki/Inter_frame#B-frame). Theses are the frames that disappears when the video is paused and the video scrubbed (modifying the  `currentTime`  variable when video is paused), both with Firefox and Chrome.
 
 ![Key, I and B frames](https://upload.wikimedia.org/wikipedia/commons/6/64/I_P_and_B_frames.svg)
 
-You can encode with ffmpeg and  `libx264 `  with the  ` -bf 0` argument in order to remove B-Frames.
+You can encode with ffmpeg and `libx264 ` with the ` -bf 0` argument in order to remove B-Frames.
 
-Todo : create a script that produces a video with enough data in each frame to ID them, create a web page that test if every frame of the video file can be accessed.
+Note : There is no way (yet) to know for sure which frame is displayed by the browser video plugin.
 
-# Installing and Coding
+To do : create a script that produces a video with enough data in each frame to ID them, create a web page that test if every frame of the video file can be accessed.
+
+# Using and Coding
 
 Pépin on the client side uses [VueJS v1.0](https://vuejs.org/), jQuery and [screenfull](https://github.com/sindresorhus/screenfull.js/).
 
@@ -87,10 +92,9 @@ To understand what every file is about :
 <img src="github/PepinGeneral_v3b.png" align="center" width="700" title="Pepin diagram">
 
 
-# Using in a web page
+## Setup
 An example of using Pépin is given in `index.html5`, with sidebar's content customized.
 
-## Setup
 First include in your HTML JS libraries and CSS :
 ```
     <script type="text/javascript" src="pepin/lib/jquery.js"></script>
@@ -115,7 +119,7 @@ This function returns an object that you can modify if you want to customize the
 
 ## Known bugs
 
- * AB Comparison not working with Firefox on medias are hosted online (works with media on localhost or file://)
+ * AB Comparison not working with Firefox on medias hosted on online with an absolute path
 
 ## Todo
 
@@ -128,11 +132,13 @@ This function returns an object that you can modify if you want to customize the
 Interesting features to be added are :
 
  * A more complete API and external events ;
- * 3D Models inspection and annotation with WebGL ;
+ * 3D Models inspection and annotation with WebGL ? ;
  * Being able to include parts of Pépin in a windowed part of the page (and not the whole document) ;
- * Popular CMS plugins ;
+ * Popular CMS integration plugins ;
  * Handling gigapixel photos ;
- * Image and video color filters.
+ * More comparisons modes (side-by-side for example) ;
+ * A color picker for notes color in the toolbar ;
+ * CSS filters.
  
 # Credits and license
 
