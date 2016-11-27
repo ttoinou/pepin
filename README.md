@@ -27,11 +27,9 @@ Online demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstette
 
 ![Screenshot B1](github/ScreenshotB1.jpg)
 
-with different photo processing (top right is the raw photo) :
-
 ![Screenshot B2](github/ScreenshotB.jpg)
 
-This feature works also with video !
+This feature also works (sometimes) with videos.
 
 (C) Gapless video playlist example with 4 sequences of Big Buck Bunny :
 
@@ -57,7 +55,7 @@ My research were focused on trying to get every frame out of H.264 mp4 file. I h
 
 You can encode with ffmpeg and `libx264 ` with the ` -bf 0` argument in order to remove B-Frames.
 
-Note : There is no way (yet) to know for sure which frame is displayed by the browser video plugin.
+Note : There is no way to know *for sure* which frame is displayed by the browser video plugin.
 
 To do : create a script that produces a video with enough data in each frame to ID them, create a web page that test if every frame of the video file can be accessed.
 
@@ -113,15 +111,11 @@ First include in your HTML JS libraries and CSS :
 
  * `$` and `screenfull` : jQuery and `screenfull.js` dependencies injection ;
  * `pepinElement` : CSS selector to find the main pepin node ;
- * `medias` : array of Medias object `{ Name , URL , ThumbnailURL , Types , ID [ , Group , Notes ] }`.
+ * `medias` : array of Medias object `{ Name , URL , ThumbnailURL , Type , ID [ , Group , Notes ] }`.
 
-This function returns an object that you can modify if you want to customize the sidebar or respond to some Pepin events. You have to give this object back to VueJS, automatically added to `window.Pepin.default`. See code and `index.html5` for more information about medias object and others methods.
+This function returns an object that you can modify if you want to customize the sidebar or respond to some Pepin events. You have to give this object back to VueJS, automatically added to `window.Pepin.default`. See code and `index.html5` for more information.
 
-## Known bugs
-
- * AB Comparison not working with Firefox on medias hosted on online with an absolute path
-
-## Todo
+## To do
 
  * Upgrade to VueJS 2.1 ;
  * Finish API ;
@@ -132,7 +126,7 @@ This function returns an object that you can modify if you want to customize the
 Interesting features to be added are :
 
  * A more complete API and external events ;
- * 3D Models inspection and annotation with WebGL ? ;
+ * 3D Models inspection and annotation with WebGL ? Shaders comparison ? ;
  * Being able to include parts of Pépin in a windowed part of the page (and not the whole document) ;
  * Popular CMS integration plugins ;
  * Handling gigapixel photos ;

@@ -12,7 +12,6 @@
  *     - Movie medias handling from Collection.vue to Pepin.js
  */
 import Util from '../Util.js'
-//import Pellicule from '../Pellicule.js'
 import Media from '../Media.js'
 
 var Vue = require('vue')

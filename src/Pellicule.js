@@ -44,6 +44,8 @@ var Pellicule = function(Options){
       this.OriginalHeight = OriginalHeight;
       this.OriginalWidth = OriginalWidth;
       this.Ratio = this.OriginalHeight / this.OriginalWidth;
+
+      //console.log(this.OriginalHeight,this.OriginalWidth,this);
     };
     
 

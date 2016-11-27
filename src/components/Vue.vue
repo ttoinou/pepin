@@ -179,11 +179,13 @@ export default {
         for( var j in this.clipPathsPoints[i] )
         {
           A.push(this.clipPathsPoints[i][j][0] + ' ' + this.clipPathsPoints[i][j][1]);
+          //A.push(this.clipPathsPoints[i][j][0]/100. + ' ' + this.clipPathsPoints[i][j][1]/100.);
+          //A.push(this.clipPathsPoints[i][j][0]/100. + '% ' + this.clipPathsPoints[i][j][1]+'%');
         }
         R.push(A.join(','));
       }
 
-      //console.log(R);
+      console.log('ff',R);
 
 
       return R;
@@ -203,6 +205,8 @@ export default {
         }
         R.push(A.join(','));
       }
+
+      console.log('chrome',R);
 
       return R;
     },
@@ -963,10 +967,16 @@ export default {
     ></div>
 
     <!-- Projections -->
+      <!-- last answer from http://stackoverflow.com/questions/33816793/clip-path-doesnt-work-in-firefox-values
+        => workaround² for Firefox is inline CSS props
+      -->
     <pepin-projection v-for="projection in projections" v-bind:projection-from-vue="projection"
     v-bind:style="{
       '-webkit-clip-path': comparison ? 'polygon('+clipPathsPX[projection.ID]+')': '',
-      'clip-path': comparison ? 'url(#pepinSvgPath'+this.projection.ID+')': ''
+      'clip-path': comparison ? 'url(#pepinSvgPath'+this.projection.ID+')': '',
+      'width' : '100%',
+      'height' : '100%',
+      'position': 'absolute'
     }"
     ></pepin-projection>
 
@@ -984,13 +994,16 @@ export default {
       v-if="comparison"
     ></div>
 
-<svg height="100%" width="100%" v-if="comparison">
-    <defs>
-        <clipPath v-for="projection in projections" :id="'pepinSvgPath'+projection.ID">
-            <polygon :points="clipPathsFF[projection.ID]" />
-        </clipPath>
-    </defs>
-</svg>
+    <!-- http://stackoverflow.com/questions/33816793/clip-path-doesnt-work-in-firefox-values
+      workaround for Firefox
+    -->
+    <svg height="100%" width="100%">
+        <defs>
+            <clipPath v-for="projection in projections" :id="'pepinSvgPath'+projection.ID">
+                <polygon :points="clipPathsFF[projection.ID]" />
+            </clipPath>
+        </defs>
+    </svg>
 
 </div>
 </template>
