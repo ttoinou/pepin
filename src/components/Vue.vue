@@ -1,4 +1,12 @@
 <script>
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/components/Vue.vue ("Vue" means View in French)
+ *     - Handle medias geometry : dimensions, drag & drop, zoom
+ *     - AB(CDEF...) Comparisons
+ *
+ */
 import Util from '../Util.js'
 import Pellicule from '../Pellicule.js'
 import Media from '../Media.js'

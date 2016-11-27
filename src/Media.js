@@ -1,5 +1,9 @@
 /*
- *
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/Media.js
+ *     - One image or one video
+ *     - Handle loading and properties
  *
  */
 

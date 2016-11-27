@@ -1,3 +1,10 @@
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/Lang.js
+ *     - Translation and macros (between $ and £)
+ *
+ */
 import PepinLang_fr from './lang/Lang.fr.js'
 import PepinLang_en from './lang/Lang.en.js'
 
@@ -14,7 +21,7 @@ function TranslateExpression(Expression,Language){
   //return Expression + '....';
 
   return Expression
-    .replace( /\$(.*?)\((.*?)\)\£/g,function(x,y,z){          // this grabs replacement tags
+    .replace( /\$(.*?)\((.*?)\)\£/g,function(x,y,z){  // this grabs replacement tags
       //console.log(y,z);
       var Translation = TranslateWord(y,Language);
       if( Translation ){
@@ -23,7 +30,7 @@ function TranslateExpression(Expression,Language){
         return x;
       }
     })
-    .replace( /\$(.*?)\£/g,function(x,y,z){          // this grabs replacement tags
+    .replace( /\$(.*?)\£/g,function(x,y,z){ // this grabs replacement tags
       //console.log(y);
 
       var Translation = TranslateWord(y,Language);

@@ -1,3 +1,11 @@
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/Pellicule.js
+ *     - One image or a playlist of video
+ *     - Handle loading of every medias in it
+ *
+ */
 
 import Util from './Util.js'
 

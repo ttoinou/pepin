@@ -60,7 +60,6 @@ $(function(){
     options : { SetDurationAuto : true, },
     '$' : jQuery,
     screenfull : screenfull,
-    props : [],
     medias : window.Medias
   });
 

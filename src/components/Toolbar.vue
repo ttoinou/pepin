@@ -1,4 +1,14 @@
 <script>
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/components/Toolbar.vue
+ *     - Top toolbar with most important actions :
+ *         sidebar, help, close Pepin, download,
+ *         zoom, fullscreen, video actions...
+ *    
+ *
+ */
 import Util from '../Util.js'
 import Pellicule from '../Pellicule.js'
 import Media from '../Media.js'

@@ -1,4 +1,13 @@
 <script>
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/components/Projection.vue
+ *     - Pellicule playing (video gapless playlist)
+ *
+ *
+ *   todo:
+ */
 import Util from '../Util.js'
 import Pellicule from '../Pellicule.js'
 import Media from '../Media.js'

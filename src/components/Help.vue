@@ -1,4 +1,12 @@
 <script>
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/components/Help.vue
+ *     - Help tip following the mouse, with key shortcuts info
+ *     - Central tip (Pepi welcome message)
+ *
+ */
 import Util from '../Util.js'
 import Lang from '../Lang.js'
 

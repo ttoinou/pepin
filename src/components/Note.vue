@@ -1,4 +1,18 @@
 <script>
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/components/Note.vue
+ *     - A note is a shape with text or free hand
+ *     - Shapes are point, circle, square...
+ *     - User can drag and drop notes, re-scale them
+ *     - Shapes dimensions are relative to the image,
+ *         points size, textarea dimensions and shape thickness are absolute
+ *     - Freehand drawing is made of bezier curves, computed after mouseup
+ *
+ *   todo:
+ *     - Resize handle should rotate
+ */
 import Util from '../Util.js'
 import Pellicule from '../Pellicule.js'
 import Media from '../Media.js'

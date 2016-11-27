@@ -1,4 +1,12 @@
 <script>
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/components/FullscreenTransition.vue
+ *     - Create a transition when switching fullscreen
+*          when placed in <pepin></pepin> 
+ *
+ */
 import Util from '../Util.js'
 
 export default {

@@ -1,6 +1,18 @@
 <script>
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/components/Collection.vue
+ *     - Visualise and select medias
+ *     - Buttons for filtering collection
+ *     - Buttons for comparison and video gapless playlist
+ *
+ *
+ *   todo:
+ *     - Movie medias handling from Collection.vue to Pepin.js
+ */
 import Util from '../Util.js'
-import Pellicule from '../Pellicule.js'
+//import Pellicule from '../Pellicule.js'
 import Media from '../Media.js'
 
 var Vue = require('vue')

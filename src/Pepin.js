@@ -1,3 +1,20 @@
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/Pepin.js
+ *     - Handles global application state
+ *     - External API
+ *     - User can extend Pepin's sidebar
+ *     - Also handles keyboard shortcuts
+ *     - Create Pellicule object from Medias
+ *
+ *
+ *   todo:
+ *     - Finish API
+ *     - Remove most jQuery calls
+ *     - Move medias handling from Collection.vue to Pepin.js
+ */
+
 import Vue from 'vue'
 import Util from './Util.js'
 import Pellicule from './Pellicule.js'

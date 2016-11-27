@@ -1,4 +1,15 @@
 <script>
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/components/Overlay.vue
+ *     - Global UI : previous/next media, timeline, help,
+*          1D lock slider, fullscreen, sidebar, components dimensions
+ *     - Global CSS (not scoped)
+ *
+ *
+ *   todo:
+ */
 import Util from '../Util.js'
 import Pellicule from '../Pellicule.js'
 import Media from '../Media.js'

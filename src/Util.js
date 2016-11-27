@@ -1,3 +1,14 @@
+/*
+ * Pepin Media Player - Antoine Dornstetter
+ * 
+ *   src/Util.js
+ *     - Misc functions
+ *     - PepinTime
+ *     - DynamicValue (used for exponential zoom for example)
+ *     - Geometry functions (Vue2D,Point2D)
+ *
+ */
+
 function toInt(a) {
   return parseInt(a, 10) || 0;
 };
