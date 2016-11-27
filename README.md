@@ -7,11 +7,15 @@ Key features are :
 
  * **Displaying** : easy pan and exponential zoom, fullscreen, media automatically fitting the available space, good display of very wide and very tall images ;
  * Multiple **medias comparison** by overlapping (Screenshot B) ;
- * **Video features** : frame accurate seeking & scrubbing (see issue after), gapless video playlist imitating the output of a video editing software (Screenshot C), looping, controls for playback rate ;
+ * **Video features** : frame-accurate seeking & scrubbing, gapless video playlist imitating the output of a video editing software (Screenshot C), looping, controls for playback rate ;
  * **Annotations** : graphical and/or textual notes, including basic shapes and freehand drawing with Bézier curves (Screenshot D), annotations can be put on a video at a given frame ;
  * **Keyboard shortcuts** for every action.
 
 Pépin was mainly designed for its video features, allowing comparisons between different output, playback of a sequence of videos directly in the browser (without using a video editing software) and frame-by-frame inspection.
+
+Some of theses features can be found in projects like [frame.io](https://frame.io/), [shotgun](https://www.shotgunsoftware.com/) or [wipster](https://wipster.io/). Solutions rarely provide frame-accurate scrubbing.
+
+Pépin was designed and tested only for Firefox and Chrome.
 
 ## Online demo
 
@@ -29,7 +33,7 @@ Online demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstette
 
 ![Screenshot B2](github/ScreenshotB.jpg)
 
-This feature also works (sometimes) with videos.
+This feature also works with videos on Firefox and sometimes Chrome.
 
 (C) Gapless video playlist example with 4 sequences of Big Buck Bunny :
 
@@ -119,7 +123,10 @@ This function returns an object that you can modify if you want to customize the
 
  * Upgrade to VueJS 2.1 ;
  * Finish API ;
- * remove `v-if` and `v-for` on the same elements (vuejs warnings)
+ * Less jQuery ;
+ * More documentation ;
+ * Remove `v-if` and `v-for` on the same elements (vuejs warnings) ;
+ * No main framerate value, but each video has its own fps (lots of changes in Pellicule).
  
 # Future
 
