@@ -12,6 +12,7 @@
  *
  *   todo:
  *     - Resize handle should rotate
+ *     - Add arrow, cross to shapes
  */
 import Util from '../Util.js'
 import Pellicule from '../Pellicule.js'

@@ -13,14 +13,14 @@ Key features are :
 
 Pépin was mainly designed for its video features, allowing comparisons between different output, playback of a sequence of videos directly in the browser (without using a video editing software) and frame-by-frame inspection.
 
-Some of theses features can be found in projects like [frame.io](https://frame.io/), [shotgun](https://www.shotgunsoftware.com/) or [wipster](https://wipster.io/). Solutions rarely provide frame-accurate scrubbing.
-
-Pépin was designed and tested only for Firefox and Chrome.
+Some of theses features can be found in video review projects like [frame.io](https://frame.io/), [shotgun](https://www.shotgunsoftware.com/) or [wipster](https://wipster.io/). Solutions rarely provide frame-accurate scrubbing.
 
 ## Online demo
 
 Online demo at <a href="http://dornstetter.com/antoine/pepin/">http://dornstetter.com/antoine/pepin/</a>. Wait for medias to download.
  
+Pépin was tested on Firefox and Chrome.
+
 ## Screenshots
 
 (A) Overall appearance  :
