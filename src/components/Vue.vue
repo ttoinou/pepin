@@ -185,7 +185,7 @@ export default {
         R.push(A.join(','));
       }
 
-      console.log('ff',R);
+      //console.log('ff',R);
 
 
       return R;
